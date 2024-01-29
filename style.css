@@ -52,6 +52,7 @@ body {
     height: 100vh;
 }
 
+
 .container-apresentacao {
     display: flex;
     justify-content: center;
@@ -59,8 +60,9 @@ body {
 }
 
 .lado-direito {
-    margin-top: 4%;
+
     margin-right: auto;
+
 
     border-top-right-radius: 5%;
     border-bottom-right-radius: 5%;
@@ -68,7 +70,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: 450px;
+    width: 500px;
     height: 450px;
 }
 
@@ -76,7 +78,6 @@ body {
 
     border-bottom-left-radius: 5%;
     border-top-left-radius: 5%;
-    margin-top: 4%;
     margin-left: auto;
     padding-top: 60px;
     align-items: center;
@@ -86,6 +87,7 @@ body {
 
 .texto {
     width: 100%;
+    font-size: larger;
     height: auto;
 }
 
@@ -107,7 +109,7 @@ body {
 .texto-com-fundo-java {
     background-color: rgb(0, 0, 0);
     /* Cor de fundo */
-    padding: 5px;
+    ;
     /* Espaçamento interno para o texto não encostar nas bordas do fundo */
     text-transform: uppercase;
     border-radius: 5px;
@@ -123,5 +125,54 @@ body {
     border-radius: 5px;
 }
 
+@media (max-width: 768px) {
 
-/* Adicione mais estilos conforme necessário */
+    /* Estilos para dispositivos com largura máxima de 768px */
+    .carousel-item img {
+        width: 100%;
+        /* Define a largura da imagem como 100% para ocupar toda a largura do carousel */
+        height: auto;
+        /* Define a altura como automática para manter a proporção da imagem */
+    }
+
+    .container-apresentacao {
+        display: flex;
+        /* Define o contêiner pai como um flex container */
+        margin: auto;
+        /* Centraliza os itens horizontalmente */
+    }
+
+    .lado-esquerdo,
+    .lado-direito {
+        flex: 1;
+        /* Faz com que ambos os elementos ocupem o mesmo espaço */
+        max-width: 50%;
+        /* Define a largura máxima de cada elemento como 50% da largura do contêiner pai */
+    }
+
+    .lado-direito {
+        background-image: url('perfil5.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: auto;
+        /* Defina a altura desejada para ambos os lados */
+    }
+
+    .texto {
+        font-size: 10px;
+        /* Reduz o tamanho do texto para dispositivos móveis */
+    }
+
+    .btn {
+        margin-bottom: 10px;
+        /* Adiciona um espaçamento entre os botões para dispositivos móveis */
+        width: 100%;
+        /* Define a largura total para os botões em dispositivos móveis */
+    }
+
+
+
+
+
+}
